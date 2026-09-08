@@ -10,10 +10,7 @@ st.markdown(
     'Esse Dashboard foi feito por: Marcos Mariano 2CDD01, '
     'Thiago Daparé 2CDD01, Matheus Costa Queiroz 2CDD01'
 )
-arquivo = st.file_uploader(
-    'Envie um arquivo CSV',
-    type=['csv']
-)
+arquivo = "dados.csv"
 if arquivo is not None:
     df = pd.read_csv(arquivo)
     df = df.drop_duplicates()
